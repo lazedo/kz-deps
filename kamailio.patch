@@ -1,0 +1,13 @@
+diff --git a/modules/db_text/dbt_raw_util.c b/modules/db_text/dbt_raw_util.c
+index ffbfa3b..9b0e2d7 100644
+--- a/modules/db_text/dbt_raw_util.c
++++ b/modules/db_text/dbt_raw_util.c
+@@ -216,7 +216,7 @@
+ 		//      needs changes in dbt_query / dbt_row_match
+ 
+ 		l = matches[2].rm_eo - matches[2].rm_so;
+-		_k1[idx] = pkg_malloc(sizeof(db_key_t));
++		_k1[idx] = pkg_malloc(sizeof(str));
+ 		_k1[idx]->len = l;
+ 		_k1[idx]->s = pkg_malloc(sizeof(char) * (l+1));
+ 		strncpy(_k1[idx]->s, buffer+matches[2].rm_so, l);
